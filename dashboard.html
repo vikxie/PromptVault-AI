@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | PromptVault AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Dashboard Page */
+
+        .dashboard-container {
+            width: 84%;
+            max-width: 1250px;
+            margin: auto;
+            padding: 65px 0 90px;
+        }
+
+        .dashboard-welcome {
+            padding: 42px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(139,92,246,0.25);
+            border-radius: 20px;
+            background:
+                radial-gradient(circle at top right, rgba(124,58,237,0.22), transparent 55%),
+                linear-gradient(135deg, #17172a, #10101d);
+        }
+
+        .dashboard-welcome .hero-tag {
+            display: inline-block;
+            color: #c4a9ff;
+            background: rgba(139,92,246,0.13);
+            border: 1px solid rgba(139,92,246,0.25);
+            padding: 9px 15px;
+            border-radius: 25px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-welcome h1 {
+            font-size: clamp(30px, 4vw, 42px);
+            margin-bottom: 13px;
+        }
+
+        .dashboard-welcome h1 span {
+            background: linear-gradient(100deg, #a78bfa, #60a5fa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dashboard-welcome p {
+            color: #a4a4bb;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Statistics */
+
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 38px;
+        }
+
+        .dashboard-stats .feature-card {
+            padding: 27px;
+            min-height: 175px;
+        }
+
+        .dashboard-stats .feature-icon {
+            margin-bottom: 17px;
+        }
+
+        .dashboard-stats .feature-card h3 {
+            font-size: 29px;
+            margin-bottom: 8px;
+        }
+
+        .dashboard-stats .feature-card p {
+            min-height: auto;
+            font-size: 13px;
+        }
+
+        /* Account Information */
+
+        .dashboard-account {
+            padding: 32px;
+            margin-bottom: 42px;
+            background: linear-gradient(145deg, #17172a, #10101d);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 18px;
+        }
+
+        .dashboard-account h2,
+        .dashboard-actions h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .account-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .account-details p {
+            padding: 17px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 10px;
+            color: #a4a4bb;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+
+        .account-details strong {
+            color: #ffffff;
+            margin-right: 5px;
+        }
+
+        .account-details span {
+            color: #c4a9ff;
+        }
+
+        /* Quick Access */
+
+        .dashboard-actions .features-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .dashboard-actions .feature-card {
+            padding: 27px;
+        }
+
+        .dashboard-actions .feature-card p {
+            min-height: 65px;
+        }
+
+        /* Logout Button */
+
+        .nav-buttons button {
+            background: transparent;
+            border: 1px solid rgba(139,92,246,0.4);
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background: #7c3aed;
+            color: white;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+            .dashboard-container {
+                width: 90%;
+            }
+
+            .dashboard-stats,
+            .dashboard-actions .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dashboard-container {
+                width: 92%;
+                padding: 40px 0 60px;
+            }
+
+            .dashboard-welcome {
+                padding: 27px 22px;
+            }
+
+            .dashboard-stats,
+            .dashboard-actions .features-grid,
+            .account-details {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-account {
+                padding: 23px 18px;
+            }
+
+            .dashboard-account h2,
+            .dashboard-actions h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            PromptVault<span>AI</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="prompt-library.html">Prompt Library</a>
+            <a href="categories.html">Categories</a>
+            <a href="favourites.html">Favourites</a>
+            <a href="ai-generator.html">AI Generator</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button type="button" id="logoutBtn" class="login-btn">Logout</button>
+        </div>
+
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="dashboard-welcome">
+
+            <span class="hero-tag">✦ YOUR PERSONAL SPACE</span>
+
+            <h1>Welcome, <span id="userName">User</span>!</h1>
+
+            <p>
+                Manage your prompts, explore new ideas and access
+                your saved favourites from one place.
+            </p>
+
+        </section>
+
+        <!-- Dashboard Statistics -->
+        <section class="dashboard-stats">
+
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>50</h3>
+                <p>Total Available Prompts</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3 id="favouriteCount">0</h3>
+                <p>Favourite Prompts</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🗂️</div>
+                <h3>5</h3>
+                <p>Prompt Categories</p>
+            </div>
+
+        </section>
+
+        <!-- Account Information -->
+        <section class="dashboard-account">
+
+            <h2>Account Information</h2>
+
+            <div class="account-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="accountName">User</span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="accountEmail">Not available</span>
+                </p>
+
+                <p>
+                    <strong>Account Status:</strong>
+                    <span>Active</span>
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Quick Access -->
+        <section class="dashboard-actions">
+
+            <h2>Quick Access</h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Explore Library</h3>
+                    <p>Discover useful prompts from different categories.</p>
+                    <a href="prompt-library.html">Explore Prompts →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>My Favourites</h3>
+                    <p>View all the prompts you have saved.</p>
+                    <a href="favourites.html">View Favourites →</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>AI Generator</h3>
+                    <p>Create customized prompts for your requirements.</p>
+                    <a href="ai-generator.html">Generate Prompt →</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            PromptVault<span>AI</span>
+        </a>
+
+        <p>© 2026 PromptVault AI. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="prompt-library.html">Library</a>
+            <a href="favourites.html">Favourites</a>
+        </div>
+
+    </footer>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

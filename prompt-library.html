@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Library | PromptVault AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            PromptVault<span>AI</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="prompt-library.html" class="active">Prompt Library</a>
+            <a href="categories.html">Categories</a>
+            <a href="favourites.html">Favourites</a>
+            <a href="ai-generator.html">AI Generator</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Get Started</a>
+        </div>
+
+    </header>
+
+    <main class="library-page">
+
+        <section class="library-hero">
+            <span class="hero-badge">✦ EXPLORE PROMPTS</span>
+
+            <h1>Your AI <span>Prompt Library</span></h1>
+
+            <p>
+                Discover powerful prompts for writing, coding,
+                marketing, education and much more.
+            </p>
+
+            <div class="library-search">
+                <span>🔍</span>
+                <input type="text" id="promptSearch"
+                    placeholder="Search prompts, topics or keywords...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+        <section class="library-content">
+
+            <div class="library-heading">
+                <div>
+                    <h2>Explore Prompts</h2>
+                    <p>Find the perfect prompt for your next idea.</p>
+                </div>
+
+                <span class="prompt-count" id="promptCount">50 Prompts</span>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Prompts</button>
+                <button class="filter-btn" data-category="writing">Writing</button>
+                <button class="filter-btn" data-category="coding">Coding</button>
+                <button class="filter-btn" data-category="marketing">Marketing</button>
+                <button class="filter-btn" data-category="education">Education</button>
+                <button class="filter-btn" data-category="business">Business</button>
+            </div>
+
+            <div class="library-grid" id="promptGrid"></div>
+
+            <div class="no-results" id="noResults" hidden>
+                <h3>No prompts found!</h3>
+                <p>Try another search term or select a different category.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            PromptVault<span>AI</span>
+        </a>
+
+        <p>© 2026 PromptVault AI. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="prompt-library.html">Library</a>
+            <a href="categories.html">Categories</a>
+            <a href="favourites.html">Favourites</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+    </footer>
+
+    <script src="library.js"></script>
+
+</body>
+</html>

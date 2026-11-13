@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Generator | PromptVault AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      PromptVault<span>AI</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="prompt-library.html">Prompt Library</a>
+      <a href="categories.html">Categories</a>
+      <a href="favourites.html">Favourites</a>
+      <a href="ai-generator.html" class="active">AI Generator</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-buttons">
+      <a href="login.html" class="login-btn">Login</a>
+      <a href="signup.html" class="signup-btn">Get Started</a>
+    </div>
+
+  </header>
+
+  <!-- Generator Hero -->
+  <section class="generator-hero">
+    <div class="container">
+
+      <span class="hero-tag">YOUR AI PROMPT ASSISTANT</span>
+
+      <h1>Create Powerful <span>AI Prompts</span></h1>
+
+      <p>
+        Describe your idea, choose a category and generate
+        a structured prompt for your AI tasks.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Generator Section -->
+  <section class="generator-section">
+    <div class="container generator-container">
+
+      <div class="generator-box">
+
+        <div class="generator-heading">
+          <h2>Prompt Generator</h2>
+          <p>Enter your requirements to create a prompt.</p>
+        </div>
+
+        <form id="generatorForm">
+
+          <div class="form-group">
+            <label for="topic">What do you want to create?</label>
+
+            <textarea
+              id="topic"
+              placeholder="Example: Create a professional blog about technology..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="generatorCategory">Select Category</label>
+
+            <select id="generatorCategory" required>
+              <option value="">Choose a category</option>
+              <option value="Writing">Writing</option>
+              <option value="Coding">Coding</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Education">Education</option>
+              <option value="Business">Business</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tone">Choose Writing Tone</label>
+
+            <select id="tone" required>
+              <option value="">Select tone</option>
+              <option value="Professional">Professional</option>
+              <option value="Friendly">Friendly</option>
+              <option value="Creative">Creative</option>
+              <option value="Simple and Easy">Simple and Easy</option>
+              <option value="Formal">Formal</option>
+            </select>
+          </div>
+
+          <button type="submit" class="generate-btn">
+            ✨ Generate Prompt
+          </button>
+
+        </form>
+
+        <!-- Generated Result -->
+        <div class="generated-result" id="generatedResult" hidden>
+
+          <div class="result-heading">
+            <h3>Your Generated Prompt</h3>
+            <span>READY TO USE</span>
+          </div>
+
+          <div class="result-content" id="resultContent"></div>
+
+          <button type="button" id="copyGenerated" class="copy-generated-btn">
+            Copy Prompt
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <p>© 2026 PromptVault AI. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="prompt-library.html">Library</a>
+        <a href="categories.html">Categories</a>
+        <a href="favourites.html">Favourites</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="generator.js"></script>
+
+</body>
+</html>

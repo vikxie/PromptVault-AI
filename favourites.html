@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Favourites | PromptVault AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            PromptVault<span>AI</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="prompt-library.html">Prompt Library</a>
+            <a href="categories.html">Categories</a>
+            <a href="favourites.html" class="active">Favourites</a>
+            <a href="ai-generator.html">AI Generator</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Get Started</a>
+        </div>
+
+    </header>
+
+    <main class="library-page">
+
+        <!-- Favourites Hero -->
+        <section class="library-hero">
+
+            <span class="hero-badge">✦ YOUR SAVED COLLECTION</span>
+
+            <h1>My <span>Favourite Prompts</span></h1>
+
+            <p>
+                All your saved AI prompts in one place.
+                Access your favourite ideas whenever you need them.
+            </p>
+
+        </section>
+
+        <!-- Favourite Prompts -->
+        <section class="library-content">
+
+            <div class="library-heading">
+
+                <div>
+                    <h2>Your Saved Prompts</h2>
+                    <p>Keep your most useful prompts close at hand.</p>
+                </div>
+
+            </div>
+
+            <div class="library-grid" id="favouriteGrid"></div>
+
+            <div class="no-results" id="emptyMessage" hidden>
+
+                <h3>No Favourite Prompts Yet!</h3>
+
+                <p>
+                    You haven't saved any prompts yet.
+                    Explore the Prompt Library and add your favourite prompts.
+                </p>
+
+                <a href="prompt-library.html" class="primary-btn">
+                    Explore Prompt Library →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            PromptVault<span>AI</span>
+        </a>
+
+        <p>© 2026 PromptVault AI. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="prompt-library.html">Library</a>
+            <a href="categories.html">Categories</a>
+            <a href="favourites.html">Favourites</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+    </footer>
+
+    <script src="favourites.js"></script>
+
+</body>
+</html>

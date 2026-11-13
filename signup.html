@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | PromptVault AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                PromptVault<span>AI.</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="prompt-library.html">Prompt Library</a>
+                <a href="categories.html">Categories</a>
+                <a href="favourites.html">Favourites</a>
+                <a href="ai-generator.html">AI Generator</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn active">Get Started</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Signup Section -->
+    <section class="auth-section">
+
+        <div class="auth-box">
+
+            <div class="auth-logo">PromptVault<span>AI.</span></div>
+
+            <h1>Create Account</h1>
+
+            <p class="auth-subtitle">
+                Join PromptVault AI and explore powerful AI prompts.
+            </p>
+
+            <form id="signupForm">
+
+                <div class="auth-form-group">
+                    <label for="signupName">Full Name</label>
+                    <input
+                        type="text"
+                        id="signupName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="auth-form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="auth-form-group">
+                    <label for="signupPassword">Password</label>
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="auth-form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="auth-submit-btn">
+                    Create Account
+                </button>
+
+                <p id="signupMessage" class="auth-message" aria-live="polite"></p>
+
+            </form>
+
+            <p class="auth-switch">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+            <a href="index.html" class="back-home">← Back to Home</a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PromptVault AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+
+</body>
+</html>
